@@ -27,7 +27,13 @@ git clone https://github.com/charlysan/docker-testlink-1.7.5.git
 docker build -t my-custom-testlink-1.7.5 .
 ```
 
-You can also build the image using a different testlink version by passing the tgz source file URL using **--build-arg** argument. E.g.
+You can also build the image using a different testlink version by setting the tgz source file URL:
+
+```shell
+--build-arg testlink_src<tgz_file_url>
+```
+
+E.g.
 
 ```shell
 docker build \
@@ -72,7 +78,7 @@ You should be able to access the installation page at
 
 The credentials to be used for MySQL are specified within [docker-compose.yml file](docker-compose.yml).
 
-For *Database host* use **mysql**
+For *Database host* use: **mysql**
 
 ![capture](docs/images/capture.png)
 
