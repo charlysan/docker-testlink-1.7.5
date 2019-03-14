@@ -1,0 +1,30 @@
+
+version: '2'
+
+services:
+  mysql:
+      image: mysql:5.5
+      ports:
+       - "3306:3306"
+      environment:
+       - MYSQL_ROOT_PASSWORD=toor
+       - MYSQL_DATABASE=testlink
+       - MYSQL_USER=user
+       - MYSQL_PASSWORD=testlink
+      volumes:
+       - mysql_data:/var/lib/mysql
+
+  testlink:
+    image: charlysan/testlink-1.7.5 
+    ports:
+      - '8080:80'
+    volumes:
+      - testlink_data:/project/testlink
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+    driver: local
+  testlink_data:
+    driver: local
