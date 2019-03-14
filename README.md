@@ -56,7 +56,7 @@ docker run \
    charlysan/testlink-1.7.5
 ```
 
-You should be able to access the installation page at [127.0.0.1:8080/testlink](127.0.0.1:8080/testlink)
+You should be able to access the installation page at [127.0.0.1:8080/testlink](http://127.0.0.1:8080/testlink)
 
 ### Run using docker-compose
 
@@ -68,7 +68,7 @@ docker-compose -f docker-compose.yml up
 ```
 
 You should be able to access the installation page at 
-[127.0.0.1:8080/testlink](127.0.0.1:8080/testlink)
+[127.0.0.1:8080/testlink](http://127.0.0.1:8080/testlink)
 
 The credentials to be used for MySQL are specified within [docker-compose.yml file](docker-compose.yml).
 
