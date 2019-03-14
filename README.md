@@ -17,19 +17,19 @@ You can build the image following the usual procedure:
 
 1 - Clone this repo
 
-```console
+```shell
 git clone https://github.com/charlysan/docker-testlink-1.7.5.git
 ```
 
 2 - build docker image
 
-```console
+```shell
 docker build -t my-custom-testlink-1.7.5 .
 ```
 
 You can also build the image using a different testlink version by passing the tgz source file URL using **--build-arg** argument. E.g.
 
-```console
+```shell
 docker build \
   --build-arg testlink_src=https://sourceforge.net/projects/testlink/files/TestLink%201.8/TestLink%201.8.5/testlink_1.8.5.tgz \
   -t my-custom-testlink-1.8.5 .
@@ -43,13 +43,13 @@ Keep in mind that the newest versions of testlink will not work properly as they
 
 1 - Pull Docker image from Docker Hub
 
-```console
+```shell
 docker pull charlysan/testlink-1.7.5
 ```
 
 2 - Run Docker Image
 
-```condole
+```shell
 docker run \
    -p 8080:80 \
    -v tlink_data:/project/testlink \
@@ -63,7 +63,7 @@ You should be able to access the installation page at [127.0.0.1:8080/testlink](
 A [Docker Compose](https://docs.docker.com/compose/) file has been included. This script will allow you to startup Testlink 1.7.5 along with MySQL 5.5. You can startup all the containers like this:
 
 
-```console
+```shell
 docker-compose -f docker-compose.yml up
 ```
 
