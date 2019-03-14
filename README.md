@@ -30,7 +30,7 @@ docker build -t my-custom-testlink-1.7.5 .
 You can also build the image using a different testlink version by setting the tgz source file URL:
 
 ```shell
---build-arg testlink_src<tgz_file_url>
+--build-arg testlink_src=<tgz_file_url>
 ```
 
 E.g.
